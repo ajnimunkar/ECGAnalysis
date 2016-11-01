@@ -96,15 +96,11 @@ This file must be linked with object files produced from:
 
 // External function prototypes.
 #ifdef __cplusplus
-extern "C"
-#endif
-
+extern "C"{
 void ResetBDAC(void) ;
-#ifdef __cplusplus
-extern "C"
-#endif
 int BeatDetectAndClassify(int ecgSample, int *beatType, int *beatMatch) ;
-
+};
+#endif
 // Local Prototypes.
 int  NextSample(int *vout,int nosig,int ifreq,
                 int ofreq,int init) ;
